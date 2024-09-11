@@ -24,7 +24,7 @@ struct Array {
 
     // Member functions
     T &at(const int &i) {
-        if (i >= N)
+        if ((i >= N) || (i < 0))
             throw std::out_of_range("Index out of range");
         return arr[i];
     }
